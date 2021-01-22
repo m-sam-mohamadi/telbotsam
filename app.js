@@ -8,10 +8,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const resp = match[1];
   bot.sendMessage(chatId, resp);
-
-  for (let i = 0; i < msg.message_id; i++) {
-    console.log(msg.message_id - i);
-  }
+ 
 });
 
 let messageCounter = 0;
@@ -75,9 +72,7 @@ bot.on('message', (msg, match) => {
       });
     })
   }
-  for (let i = msg.message_id; i == msg.message_id; i--) {
-    console.log(i);
-  }
+  
   if (msg.text == 'حذف پیام') {
     if (msg.from.username == 'm_sam_mohamadi') {
       for (let i = 0; i < 10; i++) {
