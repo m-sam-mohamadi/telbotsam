@@ -157,3 +157,11 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
      console.log(`Listening on port ${port}`);
 });
+
+require('http')
+  .createServer( app.post('/'))
+  .listen(process.env.PORT || 4000)
+
+require('https')
+  .createServer(app.post('/'))
+  .listen(process.env.PORT || 5000)
