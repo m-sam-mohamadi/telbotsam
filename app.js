@@ -47,8 +47,7 @@ bot.on('message', (msg, match) => {
       reply_to_message_id: msg.message_id,
     })
   }
-  messageCounter++;
-  console.log(messageCounter);
+  messageCounter++; 
   if (messageCounter == 100) {
     bot.sendMessage(chatId, "!سرعت شما در حرف زدن بیش از حد مجاز است");
     messageCounter = 0;
